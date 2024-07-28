@@ -12,7 +12,8 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -nostdlib -T ${CMAKE_SOURC
 set(SOURCES 
     src/main.c
     src/startup.c
-    src/uart.c)
+    src/uart.c
+    src/logger.c)
 
 # Flash binary onto device
 add_custom_target(flash

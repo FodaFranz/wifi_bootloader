@@ -7,7 +7,7 @@
 #define FLASH_KEY2 0xCDEF89AB
 
 #include "test_binary.h"
-#include "uart.h"
+#include "logger.h"
 
 extern int __approm_start__;
 
@@ -66,7 +66,8 @@ int main() {
         addr += 1;
     }
 
-    usart_init();
+    init_logger();
+    LOG("Start Bootrom");
 
     // TODO: do not hardcode address of application
     uint32_t *app_code = (uint32_t *) 0x8004000;
