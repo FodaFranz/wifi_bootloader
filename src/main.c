@@ -7,6 +7,7 @@
 #define FLASH_KEY2 0xCDEF89AB
 
 #include "test_binary.h"
+#include "uart.h"
 
 extern int __approm_start__;
 
@@ -65,6 +66,9 @@ int main() {
         addr += 1;
     }
 
+    usart_init();
+
+    // TODO: do not hardcode address of application
     uint32_t *app_code = (uint32_t *) 0x8004000;
     uint32_t app_sp = app_code[0];
     uint32_t app_start = app_code[1];
