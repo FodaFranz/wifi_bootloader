@@ -9,5 +9,11 @@
 void usart_set_baudrate(USART_TypeDef* USARTx, uint32_t periph_clock, uint32_t baudrate);
 // TODO: maybe make this generic
 void usart_init(USART_TypeDef* USARTx);
+
+// Send
 void usart_send_char(USART_TypeDef* USARTx, char c);
 void usart_send_string(USART_TypeDef* USARTx, const char* str);
+
+// Receive
+char usart_receive_char(USART_TypeDef* USARTx);
+int usart_receive(USART_TypeDef* USARTx, char* buffer, int buffer_length);

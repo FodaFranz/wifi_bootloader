@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug",
+            "type": "cortex-debug",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceFolder}/build/wifi_bootloader",
+            "request": "launch",
+            "servertype": "external",
+            "gdbPath": "/usr/bin/gdb-multiarch",
+            "gdbTarget": "localhost:3333",
+        }
+    ]
+}

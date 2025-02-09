@@ -4,4 +4,3 @@
 
 void init_logger();
 void LOG(const char* msg);
-

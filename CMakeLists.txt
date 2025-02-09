@@ -13,7 +13,8 @@ set(SOURCES
     src/main.c
     src/startup.c
     src/uart.c
-    src/logger.c)
+    src/logger.c
+    src/wifi.c)
 
 # Flash binary onto device
 add_custom_target(flash

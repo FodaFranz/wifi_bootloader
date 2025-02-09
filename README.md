@@ -20,3 +20,7 @@ hello
 * Verify every single message is correct
     * CRC????
     * HTTP resend mechanism???
+
+# Debug
+1. Start gdb server on board: `openocd -f interface/stlink.cfg -f target/stm32f4x.cfg`
+2. Connect to gdb server using vs code launch configuratiuon

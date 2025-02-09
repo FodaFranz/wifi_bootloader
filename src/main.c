@@ -7,7 +7,9 @@
 #define FLASH_KEY2 0xCDEF89AB
 
 #include "test_binary.h"
-#include "logger.h"
+#include "uart.h"
+//#include "logger.h"
+//#include "wifi.h"
 
 extern int __approm_start__;
 
@@ -66,9 +68,11 @@ int main() {
         addr += 1;
     }
 
-    init_logger();
-    LOG("Start Bootrom");
-
+    //init_logger();
+    //LOG("Start Bootrom");
+//
+    //init_wifi();
+    
     // TODO: do not hardcode address of application
     uint32_t *app_code = (uint32_t *) 0x8004000;
     uint32_t app_sp = app_code[0];
